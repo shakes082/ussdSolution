@@ -36,8 +36,6 @@ public final class USSDRequest{
 		this.requestOptions = requestOptions;
 	}
 
-
-
 	public String getMsisdn() {
 		return msisdn;
 	}
@@ -54,15 +52,12 @@ public final class USSDRequest{
 		this.userEntry = userEntry;
 	}
 
-
 	public Map<String, String> getRequestOptions() {
 		return requestOptions;
 	}
 
-
 	public void setRequestOptions(Map<String, String> requestOptions) {
 		this.requestOptions = requestOptions;
 	}
-
 	
 }

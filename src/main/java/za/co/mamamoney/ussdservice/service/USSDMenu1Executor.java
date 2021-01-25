@@ -11,13 +11,16 @@ public class USSDMenu1Executor implements USSDMenuExecutor{
 	public USSDResponse execute(USSDRequest ussdRequest){
 		
 		Map<String, String> responseData = new HashMap<String, String>();
-		responseData.put("01", "Kenya");
-		responseData.put("02", "Malawi");
+		responseData.put("01","Kenya");
+		responseData.put("02","Malawi");
 		
 		USSDResponse ussdResponse = new USSDResponse();
 		ussdResponse.setResponseData(responseData);
-		
+	
 		return ussdResponse;
 	}
-
+	
+	private boolean validateUSSDRequest(USSDRequest ussdRequest) {
+		return true;
+	}
 }

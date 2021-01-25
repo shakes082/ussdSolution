@@ -26,12 +26,7 @@ public class USSDServiceImpl implements USSDServiceIF{
 			return ussdResponse;
 		}
 		case 3:{
-			ussdMenuExecutor = new USSDMenu2Executor();
-			ussdResponse = ussdMenuExecutor.execute(ussdRequest);
-			return ussdResponse;
-		}
-		case 4:{
-			ussdMenuExecutor = new USSDMenu2Executor();
+			ussdMenuExecutor = new USSDMenu3Executor();
 			ussdResponse = ussdMenuExecutor.execute(ussdRequest);
 			return ussdResponse;
 		}

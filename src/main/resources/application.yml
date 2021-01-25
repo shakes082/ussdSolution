@@ -1,0 +1,32 @@
+logging:
+  level:
+    .: error
+    org.springframework: ERROR
+    za.co.mamamoney: DEBUG
+    org.springframework.web.filter.CommonsRequestLoggingFilter: INFO
+spring:
+  profiles:
+    active: "dev"
+  main:
+    banner-mode: "LOG"
+server:
+  address: 127.0.0.1
+  port: 8080
+  forward-headers-strategy: NATIVE
+  servlet: 
+    context-path: /mamamoney
+---
+spring:
+  profiles: dev
+logging:
+      level:
+        org:
+          hibernate:
+            type: trace
+            SQL: DEBUG
+server:
+  address: 127.0.0.1
+  port: 8080
+  forward-headers-strategy: NATIVE
+  servlet: 
+    context-path: /mamamoney

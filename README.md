@@ -23,7 +23,7 @@ If you use Maven, run the following command in a terminal window (in the complet
 ./mvnw spring-boot:run<br />
 
 <strong>Access The Application</strong><br />
-Open Up Your Favourite Browser and go to the following address:<br />
+Open up your favourite browser and go to the following address:<br />
 http://127.0.0.1:8080/mamamoney/swagger-ui/
 
 

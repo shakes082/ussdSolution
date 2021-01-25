@@ -1,17 +1,31 @@
 package za.co.mamamoney.ussdservice.service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
+
+import za.co.mamamoney.ussdservice.MamaMoneyUssdServiceApplication;
 import za.co.mamamoney.ussdservice.dtos.USSDRequest;
 import za.co.mamamoney.ussdservice.dtos.USSDResponse;
 
-@Service
-public class USSDServiceImpl implements USSDServiceIF{
+@Service("mamaMoneyServiceImpl")
+public class MamaMoneyServiceImpl implements MamaMoneyServiceIF{
+	
+	private static final Logger LOGGER = 
+			LoggerFactory.getLogger(MamaMoneyUssdServiceApplication.class);
+	
+	public MamaMoneyServiceImpl() {
+	}
 
 	@Override
 	public USSDResponse processRequest(USSDRequest ussdRequest){
 		
+		LOGGER.info("Initialized MamaMoneyServiceImpl->processRequest()");
+		
 		final int iUserEntry = ussdRequest.getUserEntry();
 		
 		USSDMenuExecutor ussdMenuExecutor = null;
+		
 		USSDResponse ussdResponse = null;
 		
 		switch (iUserEntry) {

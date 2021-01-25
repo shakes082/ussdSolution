@@ -11,6 +11,7 @@
 	<artifactId>mama_money_ussd_service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>mama_money_ussd_service</name>
+	<packaging>war</packaging>
 	<description>Mama Money Ussd Service</description>
 	
 	<properties>
@@ -66,13 +67,7 @@
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
 		</dependency>
-		
-		<dependency>
-	        <groupId>org.projectlombok</groupId>
-	        <artifactId>lombok</artifactId>
-	        <scope>provided</scope>
-    	</dependency>
-    	
+		    	
 		<dependency>
 		    <groupId>commons-io</groupId>
 		    <artifactId>commons-io</artifactId>

@@ -5,6 +5,7 @@ import javax.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.mapstruct.Context;
 import za.co.mamamoney.ussdservice.dtos.USSDRequest;
 import za.co.mamamoney.ussdservice.dtos.USSDResponse;
-import za.co.mamamoney.ussdservice.service.USSDServiceImpl;
+import za.co.mamamoney.ussdservice.service.MamaMoneyServiceIF;
 
 @RestController
 public class MamaMoneyController{
@@ -23,15 +24,9 @@ public class MamaMoneyController{
 					MamaMoneyController.class);
 	
 	@Autowired
-	private USSDServiceImpl uSSDServiceImpl;
+	@Qualifier("mamaMoneyServiceImpl")
+	private MamaMoneyServiceIF mamaMoneyServiceImpl;
 	
-	/**
-	 * 
-	 */
-	public MamaMoneyController(){
-		LOGGER.info("Initialized MamaMoneyController->MamaMoneyController()");
-		LOGGER.info("Exited MamaMoneyController->MamaMoneyController()");
-	}
 	
 	/**
 	 * @param requestContext
@@ -51,12 +46,14 @@ public class MamaMoneyController{
 		USSDResponse ussdResponse = null;
 		
 		try{
-			ussdResponse = uSSDServiceImpl.processRequest(ussdRequest);
+			ussdResponse = mamaMoneyServiceImpl.processRequest(ussdRequest);
 		}
 		catch(RuntimeException runtimeException){
 			throw runtimeException;
 		}
+		
 		LOGGER.info("Exited MamaMoneyController->ussd()");
+		
 		return ussdResponse;
 	}
 	

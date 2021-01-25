@@ -1,17 +1,12 @@
 package za.co.mamamoney.ussdservice.dtos;
+import java.util.HashMap;
 import java.util.Map;
-
 
 public final class USSDResponse{
 
-	Map<String, String> responseData;
+	Map<String, String> responseData = new HashMap<String, String>();
 	
-	public USSDResponse() {
-	}
-
-	public USSDResponse(Map<String, String> responseData) {
-		super();
-		this.responseData = responseData;
+	public USSDResponse(){
 	}
 
 	public Map<String, String> getResponseData() {
@@ -21,4 +16,5 @@ public final class USSDResponse{
 	public void setResponseData(Map<String, String> responseData) {
 		this.responseData = responseData;
 	}
+	
 }

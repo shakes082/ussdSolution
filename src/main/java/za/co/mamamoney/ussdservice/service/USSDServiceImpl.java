@@ -30,6 +30,11 @@ public class USSDServiceImpl implements USSDServiceIF{
 			ussdResponse = ussdMenuExecutor.execute(ussdRequest);
 			return ussdResponse;
 		}
+		case 4:{
+			ussdMenuExecutor = new USSDMenu4Executor();
+			ussdResponse = ussdMenuExecutor.execute(ussdRequest);
+			return ussdResponse;
+		}
 		default:
 			throw new IllegalArgumentException("Invalid User Entry Supplied: " + iUserEntry);
 		}

@@ -31,8 +31,4 @@ public class USSDMenu3Executor implements USSDMenuExecutor{
 	
 	private void sendAmountToMSISDN(String senderMSISDN, int countryCode, float amount, String recipientMSISDN, String uuid){
 	}
-
-	private boolean validateUSSDRequest(USSDRequest ussdRequest) {
-		return true;
-	}
 }

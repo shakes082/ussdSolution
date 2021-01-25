@@ -2,7 +2,7 @@ package za.co.mamamoney.ussdservice.service;
 import za.co.mamamoney.ussdservice.dtos.USSDRequest;
 import za.co.mamamoney.ussdservice.dtos.USSDResponse;
 
-public abstract class USSDMenuProcessor {
+public abstract class USSDMenuProcessor{
 
 	private USSDMenuExecutor ussdMenuExecutor;
 	
@@ -13,6 +13,4 @@ public abstract class USSDMenuProcessor {
 	public USSDResponse processRequest(USSDRequest ussdRequest) {
 		return ussdMenuExecutor.execute(ussdRequest);
 	}
-
-
 }

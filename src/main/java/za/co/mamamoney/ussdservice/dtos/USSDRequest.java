@@ -33,8 +33,6 @@ public final class USSDRequest{
 		this.requestOptions = requestOptions;
 	}
 
-
-
 	public String getMsisdn() {
 		return msisdn;
 	}

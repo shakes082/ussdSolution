@@ -1,3 +1,5 @@
+<strong>This is an ideation of a solution presented to Mama Money for solving a rest ussd problem.</strong>
+
 <strong>What You Need:</strong> <br />
 About 15 minutes<br >
 A favorite text editor or IDE<br />
@@ -6,7 +8,7 @@ Gradle 4+ or Maven 3.2+<br />
 You can also import the code straight into your IDE: Spring Tool Suite (STS) or IntelliJ IDEA <br />
 GIT<br />
 
-<strong>Clone The Repository</strong>
+<strong>Clone The Repository</strong><br />
 git clone https://github.com/shakes082/ussdSolution.git<br />
 cd into the ussdSolution directory <br />
 

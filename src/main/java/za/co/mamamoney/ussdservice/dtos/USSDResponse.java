@@ -21,6 +21,4 @@ public final class USSDResponse{
 	public void setResponseData(Map<String, String> responseData) {
 		this.responseData = responseData;
 	}
-	
-	
 }

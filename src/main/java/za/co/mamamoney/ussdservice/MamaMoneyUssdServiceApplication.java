@@ -12,6 +12,7 @@ public class MamaMoneyUssdServiceApplication{
 
 	public static void main(String[] args) {
 		LOGGER.info("Initialized MamaMoneyUssdServiceApplication->main()");
+		LOGGER.info("Starting...");
 		LOGGER.info("Exited MamaMoneyUssdServiceApplication->main()");
 		SpringApplication.run(MamaMoneyUssdServiceApplication.class, args);
 	}

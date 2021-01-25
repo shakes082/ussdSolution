@@ -10,7 +10,6 @@ public class USSDMenu1Executor implements USSDMenuExecutor{
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(USSDMenu1Executor.class);
 
-	@Override
 	public USSDResponse execute(USSDRequest ussdRequest){
 		
 		LOGGER.info("Initialized USSDMenu1Executor->execute()");

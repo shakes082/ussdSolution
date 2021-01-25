@@ -3,9 +3,10 @@
 <strong>What You Need:</strong> <br />
 About 15 minutes<br >
 A favorite text editor or IDE<br />
+
 JDK 1.8 or later<br />
 Gradle 4+ or Maven 3.2+<br />
-You can also import the code straight into your IDE: Spring Tool Suite (STS) or IntelliJ IDEA <br />
+You can also import the code straight into your IDE: Spring Tool Suite (STS) <br />
 GIT<br />
 
 <strong>Clone The Repository</strong><br />

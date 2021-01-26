@@ -32,26 +32,32 @@ public class MamaMoneyServiceImpl implements MamaMoneyServiceIF{
 			case 1:{
 				ussdMenuProcessor = getUSSDMenu1Processor();
 				ussdResponse = ussdMenuProcessor.processRequest(ussdRequest);
+				LOGGER.info("Exited MamaMoneyServiceImpl->processRequest()");
 				return ussdResponse;
 			}
 			case 2:{
 				ussdMenuProcessor = getUSSDMenu2Processor();
 				ussdResponse = ussdMenuProcessor.processRequest(ussdRequest);
+				LOGGER.info("Exited MamaMoneyServiceImpl->processRequest()");
 				return ussdResponse;
 			}
 			case 3:{
 				ussdMenuProcessor = getUSSDMenu3Processor();
 				ussdResponse = ussdMenuProcessor.processRequest(ussdRequest);
+				LOGGER.info("Exited MamaMoneyServiceImpl->processRequest()");
 				return ussdResponse;
 			}
 			case 4:{
 				ussdMenuProcessor = getUSSDMenu3Processor();
 				ussdResponse = ussdMenuProcessor.processRequest(ussdRequest);
+				LOGGER.info("Exited MamaMoneyServiceImpl->processRequest()");
 				return ussdResponse;
 			}
 			default:
+				LOGGER.info("Exited MamaMoneyServiceImpl->processRequest()");
 				throw new IllegalArgumentException("Invalid User Entry Supplied: " + iUserEntry);
 			}
+		
 	}
 
 	@Bean

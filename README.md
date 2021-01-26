@@ -38,7 +38,7 @@ Single Rest Endpoint:
 
 Get List Of Country Codes:
 
-Sample USSDRequest
+Sample USSDRequest:
 
 ```
 {
@@ -56,6 +56,31 @@ Expected USSDResponse:
   "responseData": {
     "01": "Kenya",
     "02": "Malawi"
+  }
+}
+````
+
+Convert To Country Currency:
+
+Sample USSDRequest:
+
+```
+{
+  "msisdn": "0829611111",
+  "requestOptions": {
+    "countryCode": "01",
+    "amount": "200.00"
+  },
+  "userEntry": 2
+}
+```
+
+Sample USSDResponse:
+
+```
+{
+  "responseData": {
+    "convertedAmount": "32.786884"
   }
 }
 ````

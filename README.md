@@ -1,31 +1,37 @@
 <strong>This is an ideation of a solution presented to Mama Money for solving a rest ussd problem.</strong>
 
-<strong>What You Need:</strong> <br />
-About 15 minutes<br >
-A favorite text editor or IDE<br />
+### What You Need:
 
-JDK 1.8 or later<br />
-Gradle 4+ or Maven 3.2+<br />
+About 15 minutes
+A favorite text editor or IDE
+JDK 1.8 or later
+Gradle 4+ or Maven 3.2+
 You can also import the code straight into your IDE: Spring Tool Suite (STS) <br />
-GIT<br />
+GIT
 
-<strong>Clone The Repository</strong><br />
-git clone https://github.com/shakes082/ussdSolution.git<br />
-cd into the ussdSolution directory <br />
+### Clone The Repository
 
-<strong>Run the Application</strong><br />
-To run the application, run the following command in a terminal window (in the complete) directory:<br />
+```git clone https://github.com/shakes082/ussdSolution.git```
+```cd into the ussdSolution directory```
 
-./gradlew bootRun<br />
+### Run the Application
 
+To run the application, run the following command in a terminal window (in the complete) directory:
+
+```./gradlew bootRun```
 
 If you use Maven, run the following command in a terminal window (in the complete) directory:<br />
 
-./mvnw spring-boot:run<br />
+```./mvnw spring-boot:run```
 
-<strong>Access The Application</strong><br />
+### Access The Application</strong><br />
 Open up your favourite browser and go to the following address:<br />
-http://127.0.0.1:8080/mamamoney/swagger-ui/
+
+Rest Endpoint:
+(http://127.0.0.1:8080/mamamoney/ussd)
+
+Swagger:
+(http://127.0.0.1:8080/mamamoney/swagger-ui/)
 
 
 

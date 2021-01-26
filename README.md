@@ -36,7 +36,7 @@ Open up your favourite browser and go to the following address:<br />
 Single Rest Endpoint:
 (http://127.0.0.1:8080/mamamoney/ussd)
 
-Get List Of Country Codes:
+### Get List Of Country Codes:
 
 Sample USSDRequest:
 
@@ -60,7 +60,7 @@ Expected USSDResponse:
 }
 ````
 
-Convert To Country Currency:
+### Convert To Country Currency:
 
 Sample USSDRequest:
 
@@ -81,6 +81,57 @@ Sample USSDResponse:
 {
   "responseData": {
     "convertedAmount": "32.786884"
+  }
+}
+````
+
+### Convert To Country Currency:
+
+Sample USSDRequest:
+
+```
+{
+  "msisdn": "0829611111",
+  "requestOptions": {
+    "countryCode": "01",
+    "amount": "200.00"
+  },
+  "userEntry": 2
+}
+```
+
+Sample USSDResponse:
+
+```
+{
+  "responseData": {
+    "convertedAmount": "32.786884"
+  }
+}
+````
+
+### Remit Amount To User
+
+Sample USSDRequest:
+
+```
+{
+  "msisdn": "0829611111",
+  "requestOptions": {
+    "countryCode": "01",
+    "amount": "32.786884",
+    "recipientMSISDN": "0829622222"
+  },
+  "userEntry": 3
+}
+```
+
+Sample USSDResponse:
+
+```
+{
+  "responseData": {
+    "trackingRef": "70d61ad7-a959-427a-b098-3db7854aeee0"
   }
 }
 ````

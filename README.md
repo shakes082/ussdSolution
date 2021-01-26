@@ -1,4 +1,4 @@
-<strong>This is an ideation of a solution presented to Mama Money for solving a rest ussd problem.</strong>
+#This is an ideation of a solution presented to Mama Money for solving a rest ussd problem.
 
 ### What You Need:
 

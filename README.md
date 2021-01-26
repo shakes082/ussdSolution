@@ -33,8 +33,32 @@ If you use Maven, run the following command in a terminal window (in the complet
 ### Access The Application</strong><br />
 Open up your favourite browser and go to the following address:<br />
 
-Rest Endpoint:
+Single Rest Endpoint:
 (http://127.0.0.1:8080/mamamoney/ussd)
+
+Get List Of Country Codes:
+
+Sample USSDRequest
+
+```
+{
+  "msisdn": "0829611111",
+  "requestOptions": {
+  },
+  "userEntry": 1
+}
+```
+
+Expected USSDResponse:
+
+```
+{
+  "responseData": {
+    "01": "Kenya",
+    "02": "Malawi"
+  }
+}
+````
 
 Swagger:
 (http://127.0.0.1:8080/mamamoney/swagger-ui/)

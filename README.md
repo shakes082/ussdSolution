@@ -42,7 +42,7 @@ Sample USSDRequest:
 
 ```
 {
-  "msisdn": "0829611111",
+  "msisdn": "27829611111",
   "requestOptions": {
   },
   "userEntry": 1
@@ -66,7 +66,7 @@ Sample USSDRequest:
 
 ```
 {
-  "msisdn": "0829611111",
+  "msisdn": "27829611111",
   "requestOptions": {
     "countryCode": "01",
     "amount": "200.00"
@@ -91,11 +91,11 @@ Sample USSDRequest:
 
 ```
 {
-  "msisdn": "0829611111",
+  "msisdn": "27829611111",
   "requestOptions": {
     "countryCode": "01",
     "amount": "32.786884",
-    "recipientMSISDN": "0829622222"
+    "recipientMSISDN": "27829622222"
   },
   "userEntry": 3
 }
@@ -117,7 +117,7 @@ Sample USSDRequest:
 
 ```
 {
-  "msisdn": "0829611111",
+  "msisdn": "27829611111",
   "requestOptions": {
     "trackingRef": "70d61ad7-a959-427a-b098-3db7854aeee0"
   },

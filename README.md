@@ -18,7 +18,7 @@ GIT
 
 ```git clone https://github.com/shakes082/ussdSolution.git```
 
-```cd into the ussdSolution directory```
+```cd ussdSolution ```
 
 ### Run the Application
 

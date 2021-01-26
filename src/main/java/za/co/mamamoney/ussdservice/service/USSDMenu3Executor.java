@@ -29,6 +29,7 @@ public class USSDMenu3Executor implements USSDMenuExecutor{
 		return ussdResponse;
 	}
 	
-	private void sendAmountToMSISDN(String senderMSISDN, int countryCode, float amount, String recipientMSISDN, String uuid){
+	private void sendAmountToMSISDN(String senderMSISDN, int countryCode, float amount, 
+			String recipientMSISDN, String uuid){
 	}
 }

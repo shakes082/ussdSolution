@@ -7,6 +7,26 @@ import za.co.mamamoney.ussdservice.dtos.USSDResponse;
 public class USSDMenu2Executor implements USSDMenuExecutor {
 
 	/**
+	 * 
+	 */
+	@Override
+	public USSDResponse execute(USSDRequest ussdRequest){
+		
+		final Map<String, String> iRequestOptions = ussdRequest.getRequestOptions();
+		final int countryCode = Integer.valueOf(iRequestOptions.get("countryCode"));
+		final float amount = Float.valueOf(iRequestOptions.get("amount"));
+		float convertedAmount = convertAmount(countryCode, amount);
+		
+		Map<String, String> responseData = new HashMap<String, String>();
+		responseData.put("convertedAmount", String.valueOf(convertedAmount));
+		
+		USSDResponse ussdResponse = new USSDResponse();
+		ussdResponse.setResponseData(responseData);
+		return ussdResponse;
+		
+	}
+
+	/**
 	 * @param countryCode
 	 * @param localAmount
 	 * @return
@@ -23,25 +43,6 @@ public class USSDMenu2Executor implements USSDMenuExecutor {
 		}
 		
 		return convertedAmount;
-	}
-
-	/**
-	 * 
-	 */
-	@Override
-	public USSDResponse execute(USSDRequest ussdRequest) {
-		final Map<String, String> iRequestOptions = ussdRequest.getRequestOptions();
-		final int countryCode = Integer.valueOf(iRequestOptions.get("countryCode"));
-		final float amount = Float.valueOf(iRequestOptions.get("amount"));
-		
-		float convertedAmount = convertAmount(countryCode, amount);
-		
-		Map<String, String> responseData = new HashMap<String, String>();
-		responseData.put("convertedAmount", String.valueOf(convertedAmount));
-		
-		USSDResponse ussdResponse = new USSDResponse();
-		ussdResponse.setResponseData(responseData);
-		return ussdResponse;
 	}
 
 }

@@ -48,7 +48,7 @@ public class MamaMoneyServiceImpl implements MamaMoneyServiceIF{
 				return ussdResponse;
 			}
 			case 4:{
-				ussdMenuProcessor = getUSSDMenu3Processor();
+				ussdMenuProcessor = getUSSDMenu4Processor();
 				ussdResponse = ussdMenuProcessor.processRequest(ussdRequest);
 				LOGGER.info("Exited MamaMoneyServiceImpl->processRequest()");
 				return ussdResponse;

@@ -22,6 +22,7 @@ public class USSDMenu1Executor implements USSDMenuExecutor{
 		ussdResponse.setResponseData(responseData);
 		
 		LOGGER.info("Exited USSDMenu1Executor->execute()");
+		
 		return ussdResponse;
 	}
 	

@@ -136,6 +136,30 @@ Sample USSDResponse:
 }
 ````
 
+### Track Remittance Status
+
+Sample USSDRequest:
+
+```
+{
+  "msisdn": "0829611111",
+  "requestOptions": {
+    "trackingRef": "70d61ad7-a959-427a-b098-3db7854aeee0"
+  },
+  "userEntry": 4
+}
+```
+
+Sample USSDResponse:
+
+```
+{
+  "responseData": {
+    "remittanceStatus": "Processing Request"
+  }
+}
+````
+
 Swagger:
 (http://127.0.0.1:8080/mamamoney/swagger-ui/)
 

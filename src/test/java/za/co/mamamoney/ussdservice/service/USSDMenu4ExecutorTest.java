@@ -16,14 +16,25 @@ import za.co.mamamoney.ussdservice.dtos.USSDResponse;
 @SpringBootTest
 public class USSDMenu4ExecutorTest {
 
+	/**
+	 * 
+	 */
 	@Autowired
 	private USSDMenu4Executor uSSDMenu4Executor;
 	
+	/**
+	 * 
+	 * @throws Exception
+	 */
 	@Test
 	public void contextLoads() throws Exception {
 		assertThat(uSSDMenu4Executor).isNotNull();
 	}
 	
+	/**
+	 * 
+	 * @throws Exception
+	 */
 	@Test
 	public void testExecute01() throws Exception{
 		

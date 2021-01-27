@@ -24,19 +24,21 @@ GIT
 
 To run the application, run the following command in a terminal window (in the complete) directory:
 
+
 ```./gradlew bootRun```
 
-If you use Maven, run the following command in a terminal window (in the complete) directory:<br />
+If you use Maven, run the following command in a terminal window (in the complete) directory:
+
 
 ```./mvnw spring-boot:run```
 
-### Access The Application</strong><br />
-Open up your favourite browser and go to the following address:<br />
+### Access The Application
+Open up your favourite browser and go to the following address:
 
 Single Rest Endpoint:
 (http://127.0.0.1:8080/mamamoney/ussd)
 
-### Get List Of Country Codes:
+### Get List Of Country Codes
 
 Sample USSDRequest:
 
@@ -60,7 +62,7 @@ Expected USSDResponse:
 }
 ````
 
-### Convert To Country Currency:
+### Convert To Country Currency
 
 Sample USSDRequest:
 
@@ -137,7 +139,5 @@ Sample USSDResponse:
 
 Swagger:
 (http://127.0.0.1:8080/mamamoney/swagger-ui/)
-
-
 
 

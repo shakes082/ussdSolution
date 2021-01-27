@@ -1,6 +1,10 @@
 package za.co.mamamoney.ussdservice.service;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import za.co.mamamoney.ussdservice.dtos.USSDRequest;
@@ -10,7 +14,7 @@ public class USSDMenu1Executor implements USSDMenuExecutor{
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(USSDMenu1Executor.class);
 
-	public USSDResponse execute(USSDRequest ussdRequest){
+	public USSDResponse execute(@NotNull @Valid USSDRequest ussdRequest){
 		
 		LOGGER.info("Initialized USSDMenu1Executor->execute()");
 		

@@ -1,4 +1,7 @@
 package za.co.mamamoney.ussdservice.service;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
@@ -12,16 +15,16 @@ public class MamaMoneyServiceImpl implements MamaMoneyServiceIF{
 	private static final Logger LOGGER = 
 			LoggerFactory.getLogger(MamaMoneyServiceImpl.class);
 	
-	public MamaMoneyServiceImpl() {
+	public MamaMoneyServiceImpl(){
 		LOGGER.info("Initialized MamaMoneyServiceImpl->MamaMoneyServiceImpl()");
 		LOGGER.info("Exited MamaMoneyServiceImpl->MamaMoneyServiceImpl()");
 	}
-
+	
 	@Override
-	public USSDResponse processRequest(USSDRequest ussdRequest) {
+	public USSDResponse processRequest(@NotNull @Valid USSDRequest ussdRequest) {
 		
 			LOGGER.info("Initialized MamaMoneyServiceImpl->processRequest()");
-			
+		
 			final int iUserEntry = ussdRequest.getUserEntry();
 			
 			USSDMenuProcessor ussdMenuProcessor = null;

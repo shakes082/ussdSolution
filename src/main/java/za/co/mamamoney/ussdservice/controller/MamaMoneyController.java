@@ -2,6 +2,8 @@ package za.co.mamamoney.ussdservice.controller;
 import java.time.LocalDateTime;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,13 +36,13 @@ public class MamaMoneyController{
 	 * @return {@link USSDResponse}
 	 */
 	@RequestMapping(value="/ussd", method=RequestMethod.POST, produces="application/json")
-	public @ResponseBody USSDResponse ussd(@Context HttpServletRequest 
-			requestContext, @Valid @RequestBody USSDRequest 
+	public @ResponseBody USSDResponse ussd(@NotNull @Valid @Context HttpServletRequest 
+			httpServletRequest, @NotNull @Valid @RequestBody USSDRequest 
 			ussdRequest){
 		LOGGER.info("Initialized MamaMoneyController->ussd()");
-		LOGGER.info("Ip Address: "+ requestContext.getRemoteHost());
-		LOGGER.info("Content Length: "+ requestContext.getContentLength());
-		LOGGER.info("Protocol: "+ requestContext.getProtocol());
+		LOGGER.info("Ip Address: "+ httpServletRequest.getRemoteHost());
+		LOGGER.info("Content Length: "+ httpServletRequest.getContentLength());
+		LOGGER.info("Protocol: "+ httpServletRequest.getProtocol());
 		LOGGER.info("Date: "+ LocalDateTime.now());
 		
 		USSDResponse ussdResponse = null;

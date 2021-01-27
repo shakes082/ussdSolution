@@ -13,4 +13,5 @@ public class USSDMenu1Processor extends USSDMenuProcessor{
 		LOGGER.info("Initialized USSDMenu1Processor->USSDMenu1Processor()");
 		LOGGER.info("Exited USSDMenu1Processor->USSDMenu1Processor()");
 	}
+
 }
